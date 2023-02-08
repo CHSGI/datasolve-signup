@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataSolve</title>
+    <link rel="stylesheet" href="styles4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <img src="./img/datasolve_logo-removebg-preview 1.png" alt="" />
+      <div class="logo">
+        <a href="#">Data Solve </a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Find Participants</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Research findings</a></li>
+        <li><a href="#">09035793867</a></li>
+        <li class="account"><a href="#">Get your free account</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Form Section -->
+
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <!-- <span class="details">Full Name</span> -->
+            <input type="text" placeholder="First name" required>
+          </div>
+          <div class="input-box">
+            <!-- <span class="details">Username</span> -->
+            <input type="text" placeholder="Surname" required>
+          </div>
+          <div class="input-box">
+            <!-- <span class="details">Email</span> -->
+            <input type="gender" placeholder="Gender" required>
+          </div>
+          <div class="input-box">
+            <!-- <span class="details">Phone Number</span> -->
+            <input type="date" placeholder="Year of Birth" required>
+          </div>
+          <div class="input-box">
+            <!-- <span class="details">Password</span> -->
+            <input type="text" placeholder="Bank name" required>
+          </div>
+          <div class="input-box">
+            <!-- <span class="details">Confirm Password</span> -->
+            <input type="text" placeholder="Bank account number" required>
+          </div>
+          <div class="input-box input-box-1">
+            <!-- <span class="details">Confirm Password</span> -->
+            <input type="text" placeholder="Who referred you to Data Solve" required>
+          </div>
+        </div>
+       
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataSolve</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <img src="./img/datasolve_logo-removebg-preview 1.png" alt="" />
+      <div class="logo">
+        <a href="#">Data Solve </a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Find Participants</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Research findings</a></li>
+        <li><a href="#">09035793867</a></li>
+        <li class="account"><a href="#">Get your free account</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Form -->
+
+ <div id="container">
+
+  <div class='button-box'>
+    <div id='btn'></div>
+    <button type='button'onclick='login()'class='toggle-btn toggle1'>Sign In</button>
+    <button type='button'onclick='register()'class='toggle-btn toggle2'>Sign Up</button>
+</div>
+  <div class="form-wrap">
+  <form id="login" class="input-group-login">
+    <div class="form-group">
+      <input type="email" name="email" id="first-name" placeholder="email or phone number" />
+    </div>
+    <div class="form-group">
+      <input type="password" name="password" id="last-name" placeholder="Password" />
+    </div>
+  
+      <h2><a href="#" style="text-align: center;">Forgot password?</a></h2>
+
+    <button type="submit" class="btn">Sign In</button>
+
+    <footer>If you don't have an account, you can create one</footer>
+  </form>
+</div>
+
+
+    <div class="form-wrap_3 form2">
+      <form id="register" class="input-group-register">
+        <div class="form-group">
+          <input type="phonenumber" name="phonenumber" id="first-name" placeholder="phone number(whatsapp)" />
+        </div>
+        <div class="form-group">
+          <input type="phonenumber" name="phonenumber" id="last-name" placeholder="confirm phone number(whatsapp)" />
+        </div>  
+        <div class="form-group">
+          <input type="email" name="email" id="first-name" placeholder="email address" />
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" id="last-name" placeholder="Password" />
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" id="last-name" placeholder="confirm Password" />
+        </div>
+        <button type="submit" class="btn_1">Sign Up</button>
+      </form>
+     </div>
+  </div>
+
+
+  <script>
+    var x=document.getElementById('login');
+var y=document.getElementById('register');
+var z=document.getElementById('btn');
+function register()
+{
+  x.style.left='-300px';
+  y.style.left='25px';
+  z.style.left='110px';
+}
+function login()
+{
+  x.style.left='50px';
+  y.style.left='300px';
+  z.style.left='0px';
+}
+</script>
+  
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+</body>
+</html>
